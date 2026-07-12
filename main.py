@@ -18,8 +18,6 @@ app = Flask(__name__)
 app.json.sort_keys = False
 
 
-
-
 # ===== เพิ่มส่วน DoS Protection ##---------##
 limiter = Limiter(
     key_func=get_remote_address,
