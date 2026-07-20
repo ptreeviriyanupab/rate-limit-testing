@@ -59,7 +59,12 @@ def home():
 @app.route("/login-check")
 
 # ===== เพิ่มส่วน DoS Protection ##---------##
-@limiter.limit("5 per second")
+# ป้องกันการส่งคำขอจำนวนมากในช่วงเวลาสั้น
+# @limiter.limit("5 per second")
+
+# ป้องกันการส่งคำขอต่อเนื่องเป็นเวลานาน
+@limiter.limit("10 per minute")
+
 # ===== สิ้นสุดส่วนที่เพิ่ม ##---------##
 
 def login_check():
