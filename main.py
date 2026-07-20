@@ -28,7 +28,7 @@ limiter = Limiter(
 )
 # ===== สิ้นสุดส่วนที่เพิ่ม ##---------##
 
-WORK_FACTOR = 2_000_000
+WORK_FACTOR = 200_000
 PASSWORD_LENGTH = 10
 SALT_SIZE_BYTES = 16
 
