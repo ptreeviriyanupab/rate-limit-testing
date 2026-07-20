@@ -28,7 +28,7 @@ limiter = Limiter(
 )
 # ===== สิ้นสุดส่วนที่เพิ่ม ##---------##
 
-WORK_FACTOR = 2_000_000
+WORK_FACTOR = 2000
 PASSWORD_LENGTH = 10
 SALT_SIZE_BYTES = 16
 
@@ -60,10 +60,10 @@ def home():
 
 # ===== เพิ่มส่วน DoS Protection ##---------##
 # ป้องกันการส่งคำขอจำนวนมากในช่วงเวลาสั้น
-# @limiter.limit("5 per second")
+@limiter.limit("5 per second")
 
 # ป้องกันการส่งคำขอต่อเนื่องเป็นเวลานาน
-@limiter.limit("10 per minute")
+# @limiter.limit("10 per minute")
 
 # ===== สิ้นสุดส่วนที่เพิ่ม ##---------##
 
